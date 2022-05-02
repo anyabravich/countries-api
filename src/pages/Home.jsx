@@ -48,7 +48,7 @@ export const Home = ({ setCountries, countries }) => {
               name: country.name,
               info: [
                 {
-                  title: 'a',
+                  title: 'Population',
                   description: country.population.toLocaleString(),
                 },
                 {
