@@ -96,18 +96,15 @@ export const Info = (props) => {
     currencies = [],
     languages = [],
     borders = [],
-    push,
+    navigate,
   } = props;
 
   const [neighbors, setNeighbors] = useState([]);
 
   useEffect(() => {
     if (borders.length)
-      axios
-        .get(filterByCode(borders))
-        .then(({ data }) => setNeighbors(data.map((c) => c.name)));
+      axios.get(filterByCode(borders)).then(({ data }) => setNeighbors(data.map((c) => c.name)));
   }, [borders]);
-
 
   return (
     <Wrapper>
@@ -161,7 +158,7 @@ export const Info = (props) => {
           ) : (
             <TagGroup>
               {neighbors.map((b) => (
-                <Tag key={b} onClick={() => push(`/country/${b}`)}>
+                <Tag key={b} onClick={() => navigate(`/country/${b}`)}>
                   {b}
                 </Tag>
               ))}
@@ -170,5 +167,5 @@ export const Info = (props) => {
         </Meta>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
