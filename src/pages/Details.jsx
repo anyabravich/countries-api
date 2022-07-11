@@ -9,13 +9,13 @@ import { Info } from '../components/Info';
 export const Details = () => {
   const { name } = useParams();
   const navigate = useNavigate();
-  const [ country, setCountry ] = useState(null);
+  const [country, setCountry] = useState(null);
 
   useEffect(() => {
     axios.get(searchByCountry(name)).then(({ data }) => {
       setCountry(data[0]);
-    })
-  }, [name])
+    });
+  }, [name]);
 
   return (
     <div>
@@ -25,5 +25,5 @@ export const Details = () => {
       </Button>
       {country && <Info navigate={navigate} {...country} />}
     </div>
-  )
-}
+  );
+};
