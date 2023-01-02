@@ -1,5 +1,5 @@
-@import '~normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap');
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;0,800;1,300;1,600;1,800&display=swap");
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 
 :root {
   /* Typography */
-  --family: 'Nunito Sans', sans-serif;
+  --family: "Nunito Sans", sans-serif;
   --fs-sm: 12px;
   --fs-md: 16px;
   --fw-light: 300;
@@ -26,7 +26,7 @@ body[data-theme="dark"] {
   --shadow: rgba(245, 245, 245, 0.2) 0px 0px 8px;
 }
 
-body[data-theme="light"]  {
+body[data-theme="light"] {
   --colors-text: hsl(200, 15%, 8%);
   --colors-bg: hsl(0, 0%, 98%);
   --colors-ui-base: hsl(0, 0%, 100%);

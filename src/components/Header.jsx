@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { useState, useEffect } from 'react';
-import { IoMoon,  IoMoonOutline} from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { useState, useEffect } from "react";
+import { IoMoon, IoMoonOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
-import { Container } from './Container';
+import { Container } from "./Container";
 
 const HeaderElement = styled.header`
   box-shadow: var(--shadow);
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled(Link).attrs({
-  to: '/',
+  to: "/",
 })`
   color: var(--colors-text);
   text-decoration: none;
@@ -41,12 +41,12 @@ const ModeSwitcherText = styled.span`
 `;
 
 export const Header = () => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState("light");
 
-  const toggleTheme = () => setTheme(theme === 'light' ? 'dark' : 'light');
+  const toggleTheme = () => setTheme(theme === "light" ? "dark" : "light");
 
   useEffect(() => {
-    document.body.setAttribute('data-theme', theme);
+    document.body.setAttribute("data-theme", theme);
   }, [theme]);
 
   return (
@@ -55,15 +55,11 @@ export const Header = () => {
         <Wrapper>
           <Title>Where in the world?</Title>
           <ModeSwitcher onClick={toggleTheme}>
-            {theme  === 'light' ? (
-              <IoMoonOutline />
-            ) : (
-              <IoMoon />
-            )}
-            <ModeSwitcherText>{ theme } Mode</ModeSwitcherText>
+            {theme === "light" ? <IoMoonOutline /> : <IoMoon />}
+            <ModeSwitcherText>{theme} Mode</ModeSwitcherText>
           </ModeSwitcher>
         </Wrapper>
       </Container>
     </HeaderElement>
-  )
-}
+  );
+};
