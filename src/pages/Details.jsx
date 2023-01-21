@@ -1,10 +1,10 @@
-import axios from 'axios';
-import { IoArrowBack } from 'react-icons/io5';
-import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { searchByCountry } from '../config';
-import { Button } from '../components/Button';
-import { Info } from '../components/Info';
+import axios from "axios";
+import { IoArrowBack } from "react-icons/io5";
+import { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { searchByCountry } from "../config";
+import { Button } from "../components/Button";
+import { Info } from "../components/Info";
 
 export const Details = () => {
   const { name } = useParams();
