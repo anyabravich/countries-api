@@ -5,7 +5,6 @@ import { Controls } from "../components/Controls";
 import { List } from "../components/List";
 import { Card } from "../components/Card";
 import { ALL_COUNTRIES } from "../config";
-import { Audio } from "react-loader-spinner";
 
 export const Home = ({ setCountries, countries }) => {
   const [isLoad, setIsLoad] = useState(false);
@@ -51,15 +50,7 @@ export const Home = ({ setCountries, countries }) => {
       <Controls onSearch={handleSearch} />
       <List>
         {isLoad ? (
-          <Audio
-            height="80"
-            width="80"
-            radius="9"
-            color="green"
-            ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
-            wrapperClass={{}}
-          />
+          <p>Loading countries...</p>
         ) : (
           filteredCountries.map((country) => {
             const countryInfo = {
